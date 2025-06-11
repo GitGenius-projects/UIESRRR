@@ -1,6 +1,37 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
   <head>
+    <head>
+  …
+  <style>
+    .form-wrap { position: relative; margin-bottom: 1.2em; }
+    .form-input {
+      color: #000;
+      background: #fff;
+      padding: .6em;
+      width: 100%;
+    }
+    .form-label {
+      color: #555;
+      position: absolute;
+      top: 50%;
+      left: .8em;
+      transform: translateY(-50%);
+      pointer-events: none;
+      transition: .2s;
+      background: rgba(255,255,255,0.8);
+      padding: 0 .3em;
+    }
+    .form-input:focus + .form-label,
+    .form-input:not(:placeholder-shown) + .form-label {
+      top: -.6em;
+      font-size: .85em;
+      color: #222;
+      background: #fff;
+    }
+  </style>
+  …
+
     <title>Контактна інформація</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
