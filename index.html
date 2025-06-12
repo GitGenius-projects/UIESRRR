@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- LightGallery (використовується для всіх галерей) -->
+    <!-- LightGallery (для всіх галерей) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
   </head>
   <body>
@@ -194,10 +194,14 @@
           </div>
         </div>
       </section>
-     <!-- What We Offer. Секція "Сорти" — ТІЛЬКИ для Fancybox -->
-       <section class="section section-md bg-default">
+    <!-- Swiper-->
+      <section class="section swiper-container swiper-slider swiper-slider-2 swiper-slider-3" data-loop="true" data-autoplay="5000" data-simulate-touch="false" data-slide-effect="fade">
+        <!-- ... залишаєш як є ... -->
+      </section>
+      <!-- Галерея "Сорти" -->
+      <section class="section section-md bg-default">
         <div class="container">
-             <h3 class="team-modern-name"><a href="http://service.ukragroexpert.com.ua/">Сорти</a></h3>
+          <h3 class="team-modern-name"><a href="http://service.ukragroexpert.com.ua/">Сорти</a></h3>
           <div id="sorty-gallery" class="row row-md row-30">
             <div class="col-sm-6 col-lg-4">
               <a href="images/menu-1-1200x900.jpg" data-sub-html="Пшениця полба звичайна">
@@ -544,7 +548,7 @@
     <!-- Global Mailform Output-->
     <div class="snackbars" id="form-output-global"></div>
     <!-- Javascript-->
-   <!-- Основні скрипти -->
+     <!-- Основні скрипти -->
     <script src="js/core.min.js"></script>
     <script src="js/script.js"></script>
     <!-- Віджет погоди (залишаєш як у тебе) -->
@@ -604,16 +608,18 @@
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.js"></script>
     <script>
-      // Ініціалізація для галереї в шапці
-      lightGallery(document.getElementById('top-gallery'), {
-        plugins: [lgThumbnail, lgZoom],
-        speed: 500
-      });
-      // Ініціалізація для "Сорти"
-      lightGallery(document.getElementById('sorty-gallery'), {
-        plugins: [lgThumbnail, lgZoom],
-        speed: 500
-      });
+      if(document.getElementById('top-gallery')) {
+        lightGallery(document.getElementById('top-gallery'), {
+          plugins: [lgThumbnail, lgZoom],
+          speed: 500
+        });
+      }
+      if(document.getElementById('sorty-gallery')) {
+        lightGallery(document.getElementById('sorty-gallery'), {
+          plugins: [lgThumbnail, lgZoom],
+          speed: 500
+        });
+      }
       // Якщо буде ще інша галерея — додаєш аналогічно!
     </script>
   </body>
