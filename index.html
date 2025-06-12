@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html class="wide wow-animation" lang="en">
- <head>
+  <head>
     <title>Головна</title>
     <meta name="format-detection" content="telephone=no">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
@@ -12,35 +12,8 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="css/style.css">
-    <!-- Fancybox only for section "Сорти" -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.css" />
-    <!-- LightGallery only for other galleries -->
+    <!-- LightGallery (використовується для всіх галерей) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/css/lightgallery-bundle.min.css" />
-    <!--[if lt IE 10]>
-    <div style="background: #212121; padding: 10px 0; box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3); clear: both; text-align:center; position: relative; z-index:1;"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="images/ie8-panel/warning_bar_0000_us.jpg" border="0" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
-    <script src="js/html5shiv.min.js"></script>
-    <![endif]-->
-    <style>
-    /* Fancybox: видимість навігації та кнопок */
-    .fancybox__toolbar, .fancybox__nav, .fancybox__button, .fancybox__button--close {
-      display: flex !important;
-      opacity: 1 !important;
-      visibility: visible !important;
-      z-index: 99999 !important;
-    }
-    .fancybox__button svg {
-      width: 32px !important;
-      height: 32px !important;
-      fill: #fff !important;
-      stroke: #222 !important;
-      background: #222 !important;
-      border-radius: 5px !important;
-      padding: 4px !important;
-    }
-    .fancybox__toolbar, .fancybox__nav {
-      background: none !important;
-    }
-    </style>
   </head>
   <body>
     <div class="preloader">
@@ -222,57 +195,39 @@
         </div>
       </section>
      <!-- What We Offer. Секція "Сорти" — ТІЛЬКИ для Fancybox -->
-      <section class="section section-md bg-default">
+       <section class="section section-md bg-default">
         <div class="container">
-          <h3 class="team-modern-name"><a href="http://service.ukragroexpert.com.ua/">Сорти</a></h3>
-          <div class="row row-md row-30">
+             <h3 class="team-modern-name"><a href="http://service.ukragroexpert.com.ua/">Сорти</a></h3>
+          <div id="sorty-gallery" class="row row-md row-30">
             <div class="col-sm-6 col-lg-4">
-              <div class="gallery-item">
-                <a data-fancybox="sorty" href="images/menu-1-1200x900.jpg" data-caption="Пшениця полба звичайна">
-                  <img src="images/menu-1-370x278.jpg" alt="Пшениця полба звичайна" class="img-fluid" />
-                </a>
-                <div class="gallery-caption">Пшениця полба звичайна</div>
-              </div>
+              <a href="images/menu-1-1200x900.jpg" data-sub-html="Пшениця полба звичайна">
+                <img src="images/menu-1-370x278.jpg" alt="Пшениця полба звичайна" class="img-fluid" />
+              </a>
             </div>
             <div class="col-sm-6 col-lg-4">
-              <div class="gallery-item">
-                <a data-fancybox="sorty" href="images/menu-2-1200x900.jpg" data-caption="Буряк цукровий">
-                  <img src="images/menu-2-370x278.jpg" alt="Буряк цукровий" class="img-fluid" />
-                </a>
-                <div class="gallery-caption">Буряк цукровий</div>
-              </div>
+              <a href="images/menu-2-1200x900.jpg" data-sub-html="Буряк цукровий">
+                <img src="images/menu-2-370x278.jpg" alt="Буряк цукровий" class="img-fluid" />
+              </a>
             </div>
             <div class="col-sm-6 col-lg-4">
-              <div class="gallery-item">
-                <a data-fancybox="sorty" href="images/menu-3-1200x900.jpg" data-caption="Пшениця озима">
-                  <img src="images/menu-3-370x278.jpg" alt="Пшениця озима" class="img-fluid" />
-                </a>
-                <div class="gallery-caption">Пшениця озима</div>
-              </div>
+              <a href="images/menu-3-1200x900.jpg" data-sub-html="Пшениця озима">
+                <img src="images/menu-3-370x278.jpg" alt="Пшениця озима" class="img-fluid" />
+              </a>
             </div>
             <div class="col-sm-6 col-lg-4">
-              <div class="gallery-item">
-                <a data-fancybox="sorty" href="images/menu-4-1200x900.jpg" data-caption="Ячмінь звичайний озимий">
-                  <img src="images/menu-4-370x278.jpg" alt="Ячмінь звичайний озимий" class="img-fluid" />
-                </a>
-                <div class="gallery-caption">Ячмінь звичайний озимий</div>
-              </div>
+              <a href="images/menu-4-1200x900.jpg" data-sub-html="Ячмінь звичайний озимий">
+                <img src="images/menu-4-370x278.jpg" alt="Ячмінь звичайний озимий" class="img-fluid" />
+              </a>
             </div>
             <div class="col-sm-6 col-lg-4">
-              <div class="gallery-item">
-                <a data-fancybox="sorty" href="images/menu-5-1200x900.jpg" data-caption="Пшениця картлійська">
-                  <img src="images/menu-5-370x278.jpg" alt="Пшениця картлійська" class="img-fluid" />
-                </a>
-                <div class="gallery-caption">Пшениця картлійська</div>
-              </div>
+              <a href="images/menu-5-1200x900.jpg" data-sub-html="Пшениця картлійська">
+                <img src="images/menu-5-370x278.jpg" alt="Пшениця картлійська" class="img-fluid" />
+              </a>
             </div>
             <div class="col-sm-6 col-lg-4">
-              <div class="gallery-item">
-                <a data-fancybox="sorty" href="images/menu-6-1200x900.jpg" data-caption="Гарбуз великоплідний">
-                  <img src="images/menu-6-370x278.jpg" alt="Гарбуз великоплідний" class="img-fluid" />
-                </a>
-                <div class="gallery-caption">Гарбуз великоплідний</div>
-              </div>
+              <a href="images/menu-6-1200x900.jpg" data-sub-html="Гарбуз великоплідний">
+                <img src="images/menu-6-370x278.jpg" alt="Гарбуз великоплідний" class="img-fluid" />
+              </a>
             </div>
           </div>
         </div>
@@ -644,35 +599,22 @@
         });
     }
     </script>
-
-    <!-- Fancybox (тільки для секції "Сорти") -->
-    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.js"></script>
-    <script>
-    Fancybox.bind('[data-fancybox="sorty"]', {
-      Toolbar: {
-        display: [
-          { id: "prev", position: "center" },
-          { id: "counter", position: "center" },
-          { id: "next", position: "center" },
-          "close"
-        ]
-      }
-    });
-    </script>
-
-    <!-- LightGallery (тільки для галерей з data-lightgallery, НЕ для "Сорти") -->
+    <!-- LightGallery (для всіх галерей) -->
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/lightgallery.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/thumbnail/lg-thumbnail.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lightgallery@2.7.1/plugins/zoom/lg-zoom.umd.js"></script>
     <script>
-    // ініціалізація тільки для data-lightgallery, наприклад:
-    document.querySelectorAll('[data-lightgallery="group"]').forEach(function(gallery) {
-      lightGallery(gallery, {
-        selector: 'a[data-lightgallery="item"]',
+      // Ініціалізація для галереї в шапці
+      lightGallery(document.getElementById('top-gallery'), {
         plugins: [lgThumbnail, lgZoom],
         speed: 500
       });
-    });
+      // Ініціалізація для "Сорти"
+      lightGallery(document.getElementById('sorty-gallery'), {
+        plugins: [lgThumbnail, lgZoom],
+        speed: 500
+      });
+      // Якщо буде ще інша галерея — додаєш аналогічно!
     </script>
   </body>
 </html>
