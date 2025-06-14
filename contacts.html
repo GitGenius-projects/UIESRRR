@@ -192,7 +192,7 @@
     <div class="row row-60 justify-content-center">
       <div class="col-lg-8">
         <h4 class="text-spacing-25 text-transform-none">Контактна інформація</h4>
-        <form id="contact-form" action="https://formsubmit.co/ajax/dfbe96a7b418b35f5b452c396042b3b3" method="POST" enctype="multipart/form-data" class="rd-form rd-mailform">
+        <form id="contact-form" action="https://getform.io/f/aronxzyb" method="POST" enctype="multipart/form-data" class="rd-form rd-mailform">
           <!-- Приховані поля -->
           <input type="hidden" name="_captcha" value="false">
           <div class="row row-20 gutters-20">
@@ -230,11 +230,12 @@
                 <textarea class="form-input textarea-lg" id="contact-message-5" name="message" data-constraints="@Required"></textarea>
               </div>
             </div>
-            <!-- Поле для файлу -->
+            <!-- Компактне поле для файлу -->
             <div class="col-12">
-              <div class="form-wrap">
-                <label class="form-label" for="contact-file-5">Додати файл</label>
-                <input class="form-input" id="contact-file-5" type="file" name="attachment" multiple>
+              <div class="form-wrap" style="display:flex;align-items:center;gap:8px;">
+                <label class="form-label" for="contact-file-5" style="margin-bottom:0;">Додати файл</label>
+                <input class="form-input" id="contact-file-5" type="file" name="attachment" multiple style="width:auto;max-width:180px;padding:4px 0;">
+                <span id="fileName" style="font-size:0.95em; color:#555;">Файл не вибрано</span>
               </div>
             </div>
           </div>
@@ -446,7 +447,15 @@ if(weatherInfo) {
     });
 }
 </script>
-    <script>
+  <script>
+// Відображення імені вибраного файлу
+document.getElementById('contact-file-5').onchange = function() {
+  const files = this.files;
+  document.getElementById('fileName').textContent = files.length
+    ? Array.from(files).map(f => f.name).join(', ')
+    : 'Файл не вибрано';
+};
+// Відправка через AJAX + показ повідомлення про успіх
 document.getElementById('contact-form').addEventListener('submit', async function(e) {
   e.preventDefault();
   const form = e.target;
