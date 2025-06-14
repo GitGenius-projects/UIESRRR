@@ -493,16 +493,12 @@
         </div>
       </section>
 
-  <!-- Tell-->
-
-<!-- Tell-->
 <!-- Tell-->
 <section class="section section-sm section-first bg-default">
   <div class="container">
     <h3 class="heading-3">ЗВ'ЯЗАТИСЬ З НАМИ</h3>
-    <form action="https://getform.io/f/aronxzyb" method="POST" enctype="multipart/form-data" class="rd-form rd-mailform">
+    <form id="contact-form" action="https://getform.io/f/aronxzyb" method="POST" enctype="multipart/form-data" class="rd-form rd-mailform">
       <!-- Приховані поля -->
-      <input type="hidden" name="_next" value="https://gitgenius-projects.github.io/UIESRRR/thankyou.html">
       <input type="hidden" name="_captcha" value="false">
       <div class="row row-20 gutters-20">
         <div class="col-md-6 col-lg-4 oh-desktop">
@@ -552,6 +548,9 @@
         </article>
       </div>
     </form>
+    <div id="success-message" style="display:none; color:green; font-size:1.2em; margin-top:20px; text-align:center;">
+      Ваше повідомлення успішно надіслано!
+    </div>
   </div>
 </section>
       <!-- Section Services  Last section-->
@@ -720,6 +719,23 @@ if(weatherInfo) {
 }
 </script>
     <!-- КІНЕЦЬ: Віджет погоди -->
-
+<script>
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+  const res = await fetch(form.action, {
+    method: 'POST',
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  });
+  if (res.ok) {
+    form.style.display = "none";
+    document.getElementById('success-message').style.display = "block";
+  } else {
+    alert("Виникла помилка. Спробуйте ще раз.");
+  }
+});
+</script>
   </body>
 </html>
