@@ -185,7 +185,6 @@
           </ul>
         </div>
       </section>
-      <!-- Contacts-->
 <!-- Contacts-->
 <section class="section section-lg bg-default text-md-left">
   <div class="container">
@@ -230,59 +229,66 @@
                 <textarea class="form-input textarea-lg" id="contact-message-5" name="message" data-constraints="@Required"></textarea>
               </div>
             </div>
-            <!-- Компактне поле для файлу -->
-            <div class="col-12">
-              <div class="form-wrap" style="display:flex;align-items:center;gap:8px;">
-                <label class="form-label" for="contact-file-5" style="margin-bottom:0;">Додати файл</label>
-                <input class="form-input" id="contact-file-5" type="file" name="attachment" multiple style="width:auto;max-width:180px;padding:4px 0;">
-                <span id="fileName" style="font-size:0.95em; color:#555;">Файл не вибрано</span>
-              </div>
+          </div>
+          <div class="row row-20 gutters-20 align-items-center">
+            <div class="col-auto">
+              <button class="button button-secondary button-winona" type="submit">Зв'язатись з нами</button>
+            </div>
+            <div class="col-auto">
+              <!-- Компактне поле для файлу -->
+              <label style="margin-bottom:0; cursor:pointer;">
+                <input type="file" name="attachment" id="contact-file-5" multiple style="display:none;">
+                <span class="file-btn" style="display:inline-block; padding:8px 12px; background:#f8f8f8; border:1px solid #ccc; border-radius:4px; cursor:pointer;">
+                  Додати файл
+                </span>
+              </label>
+              <span id="fileName" style="margin-left:8px; font-size:0.95em; color:#555;">Файл не вибрано</span>
             </div>
           </div>
-          <button class="button button-secondary button-winona" type="submit">Зв'язатись з нами</button>
         </form>
         <div id="success-message" style="display:none; color:green; font-size:1.2em; margin-top:20px; text-align:center;">
           Ваше повідомлення успішно надіслано!
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="aside-contacts">
+          <div class="row row-30">
+            <div class="col-sm-6 col-lg-12 aside-contacts-item">
+              <p class="aside-contacts-title">Наші соціальні мережі</p>
+              <ul class="list-inline contacts-social-list list-inline-sm">
+                <li><a class="icon mdi mdi-facebook" href="https://www.facebook.com/profile.php?id=100069797153345"></a></li>
+                <li><a class="icon mdi mdi-twitter" href="https://x.com/home"></a></li>
+                <li><a class="icon mdi mdi-instagram" href="https://www.instagram.com/"></a></li>
+                <li><a class="icon mdi mdi-google-plus" href="https://mail.google.com/mail/u/0/#inbox"></a></li>
+              </ul>
             </div>
-            <div class="col-lg-4">
-              <div class="aside-contacts">
-                <div class="row row-30">
-                  <div class="col-sm-6 col-lg-12 aside-contacts-item">
-                    <p class="aside-contacts-title">Наші соціальні мережі</p>
-                    <ul class="list-inline contacts-social-list list-inline-sm">
-                      <li><a class="icon mdi mdi-facebook" href="https://www.facebook.com/profile.php?id=100069797153345"></a></li>
-                      <li><a class="icon mdi mdi-twitter" href="https://x.com/home"></a></li>
-                      <li><a class="icon mdi mdi-instagram" href="https://www.instagram.com/"></a></li>
-                      <li><a class="icon mdi mdi-google-plus" href="https://mail.google.com/mail/u/0/#inbox"></a></li>
-                    </ul>
-                  </div>
-                  <div class="col-sm-6 col-lg-12 aside-contacts-item">
-                    <p class="aside-contacts-title">Телефон</p>
-                    <div class="unit unit-spacing-xs justify-content-center justify-content-md-start">
-                      <div class="unit-left"><span class="icon mdi mdi-phone"></span></div>
-                      <div class="unit-body"><a class="phone" href="tel:#">+38 096 38 46 282</a></div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-12 aside-contacts-item">
-                    <p class="aside-contacts-title">E-mail</p>
-                    <div class="unit unit-spacing-xs justify-content-center justify-content-md-start">
-                      <div class="unit-left"><span class="icon mdi mdi-email-outline"></span></div>
-                        <div class="unit-body"><a class="mail" href="mailto:rivno.filiya@gmail.com">rivno.filiya@gmail.com</a></div>
-                    </div>
-                  </div>
-                  <div class="col-sm-6 col-lg-12 aside-contacts-item">
-                    <p class="aside-contacts-title">Адреса</p>
-                    <div class="unit unit-spacing-xs justify-content-center justify-content-md-start">
-                      <div class="unit-left"><span class="icon mdi mdi-map-marker"></span></div>
-                      <div class="unit-body"><a class="address" href="https://maps.app.goo.gl/9yhBueA9SMcs3w3F8"> Рівненська область, Рівненський район,<br class="d-md-none"> село Верхівськ, вулиця Шевченка, будинок 27-А</a></div>
-                    </div>
-                  </div>
-                </div>
+            <div class="col-sm-6 col-lg-12 aside-contacts-item">
+              <p class="aside-contacts-title">Телефон</p>
+              <div class="unit unit-spacing-xs justify-content-center justify-content-md-start">
+                <div class="unit-left"><span class="icon mdi mdi-phone"></span></div>
+                <div class="unit-body"><a class="phone" href="tel:#">+38 096 38 46 282</a></div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-12 aside-contacts-item">
+              <p class="aside-contacts-title">E-mail</p>
+              <div class="unit unit-spacing-xs justify-content-center justify-content-md-start">
+                <div class="unit-left"><span class="icon mdi mdi-email-outline"></span></div>
+                <div class="unit-body"><a class="mail" href="mailto:rivno.filiya@gmail.com">rivno.filiya@gmail.com</a></div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-lg-12 aside-contacts-item">
+              <p class="aside-contacts-title">Адреса</p>
+              <div class="unit unit-spacing-xs justify-content-center justify-content-md-start">
+                <div class="unit-left"><span class="icon mdi mdi-map-marker"></span></div>
+                <div class="unit-body"><a class="address" href="https://maps.app.goo.gl/9yhBueA9SMcs3w3F8"> Рівненська область, Рівненський район,<br class="d-md-none"> село Верхівськ, вулиця Шевченка, будинок 27-А</a></div>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </div>
+  </div>
+</section>
 
  
     
@@ -447,23 +453,23 @@ if(weatherInfo) {
     });
 }
 </script>
-  <script>
-// Відображення імені вибраного файлу
+<script>
+document.querySelector('.file-btn').onclick = function() {
+  document.getElementById('contact-file-5').click();
+};
 document.getElementById('contact-file-5').onchange = function() {
   const files = this.files;
   document.getElementById('fileName').textContent = files.length
     ? Array.from(files).map(f => f.name).join(', ')
     : 'Файл не вибрано';
 };
-// Відправка через AJAX + показ повідомлення про успіх
 document.getElementById('contact-form').addEventListener('submit', async function(e) {
   e.preventDefault();
   const form = e.target;
   const data = new FormData(form);
   const res = await fetch(form.action, {
     method: 'POST',
-    body: data,
-    headers: { 'Accept': 'application/json' }
+    body: data
   });
   if (res.ok) {
     form.style.display = "none";
